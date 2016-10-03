@@ -1,8 +1,8 @@
-# Cute Grids
+# Idea Grid
 
 ##About
 
-Cute Grids is a responsive grid system full of features to help designers and developers get started with their responsive layout. Visit [Cute Grids](http://www.cutegrids.com) for more details.
+Idea Grid is a responsive grid system full of features to help designers and developers get started with their responsive layout. Visit [Cute Grids](http://www.cutegrids.com) for more details.
 
 ##Features
 
