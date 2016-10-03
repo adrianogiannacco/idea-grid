@@ -3,74 +3,296 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cutegrids</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/cutegrids.css">
+    <title>Idea Grid</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/ideagrid.css">
     <!--  For IE8 support include the following Respond.js for support of media queiries and also download and include the REM pollyfill from https://github.com/chuckcarpenter/REM-unit-polyfill for REM support -->
     <!--[if lt IE 9]>
     	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <![endif]-->
     <style>
-        h1 {
+        @import url(https://fonts.googleapis.com/css?family=Questrial|Dosis:400,600);
+        h1, h2 {
             text-align: center;
+            text-transform: uppercase;
+            font-size: 300%;
+            color: #5c606b;
+            margin: 0;
+            padding: 30px 0;
         }
-        .box {
-          text-align: center;
-          font: 15px "Helvetica Neue";
-          background:#5F9BD1;
-          color: #fff;
-          padding: 15px 0;
-          
+        h2 {
+            font-size: 220%;
         }
+        h1 ,h2, h3 {
+            font-family: "Dosis";
+        }
+        h3 {
+            font-size: 150%;
+            font-weight: 600;
+            padding-bottom: 16px;
+        }
+        p {
+            font-family: "Questrial";
+        }
+        .idea-row > div {
+            background:#A6CE39;
+            color: #fff;
+        }
+        .idea-row .violet {
+            background-color: #7C2A90;
+        }
+        .arval-test [class*='idea-'] {
+            height: 0;
+            padding-bottom: 100px;
+        }
+        @media screen and (min-width:480px) {
+            .arval-test [class*='idea-'] {
+                margin-bottom: 0;
+            }
+        }
+        .container {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 0 20px;
+            background-color: #e8e8e8;
+        }
+        .container:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        
     </style>
 </head>
 <body>
-    <div class="row">
-        <div class="cute-12-tablet">
-            <h1>Cute Grids</h1>
+    <div class="container">
+        
+        <div class="idea-row">
+            <h1>Idea Grid</h1>
         </div>
-    </div>
-    <div class="row">
-        <div class="cute-12-tablet">
-            <div class="box">
-                cute-12-tablet
+                
+        <div class="idea-row">
+            <h2>Responsive test</h2>
+        </div>
+        
+        <div class="idea-row margin-3 grid-2-phone grid-3-tablet grid-4-laptop grid-6-desktop tablet-m-reset laptop-m-reset desktop-m-reset">
+            <div class="idea-sm-wide idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-sm-wide idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>  
+            <div class="idea-6-phone idea-4-tablet idea-3-laptop idea-2-desktop idea-padding">
+                <h3>Cras ornare tristique elit.</h3>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>       
+        </div>
+        
+        <div class="idea-row">
+            <h2>Fantasia test</h2>
+        </div>
+        
+        <div class="idea-row margin-2 grid-2-phone grid-3-laptop laptop-m-reset">
+            <div class="idea-padding idea-sm-wide idea-6-phone idea-7-tablet idea-7-laptop">
+                <p>Donec nec justo eget felis.</p>
+            </div> 
+            <div class="idea-padding idea-6-phone idea-5-tablet idea-3-laptop">
+                <p>Donec nec justo eget felis.</p>
+            </div> 
+            <div class="idea-padding idea-6-phone idea-5-tablet idea-2-laptop">
+                <p>Donec nec justo eget felis.</p>
+            </div> 
+            <div class="idea-padding idea-sm-wide idea-6-phone idea-7-tablet idea-5-laptop">
+                <p>Donec nec justo eget felis.</p>
+            </div> 
+            <div class="idea-padding idea-6-phone idea-7-tablet idea-6-laptop">
+                <p>Donec nec justo eget felis.</p>
+            </div> 
+            <div class="idea-padding idea-6-phone idea-5-tablet idea-1-laptop">
+                <p>Donec nec justo eget felis.</p>     
+            </div> 
+            <div class="idea-padding idea-3-laptop">
+                <p>Donec nec justo eget felis.</p>     
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="cute-6-tablet">
-            <div class="box">
-                <p>cute-6-tablet</p>
+            <div class="idea-padding idea-6-laptop">
+                <p>Donec nec justo eget felis.</p>     
             </div>
+            <div class="idea-padding idea-3-laptop">
+                <p>Donec nec justo eget felis.</p>     
+            </div>       
         </div>
-        <div class="cute-6-tablet">
-            <div class="box">
-                <p>cute-6-tablet</p>
+        
+        <div class="idea-row margin-2 grid-3-phone grid-4-tablet grid-6-laptop grid-12-desktop tablet-m-reset laptop-m-reset desktop-m-reset">
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="cute-3-tablet">
-            <div class="box">
-                <p>cute-4-tablet</p>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
             </div>
-        </div>
-        <div class="cute-3-tablet">
-            <div class="box">
-                <p>cute-4-tablet</p>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
             </div>
-        </div>
-        <div class="cute-3-tablet">
-            <div class="box">
-                <p>cute-4-tablet</p>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
             </div>
-        </div>
-        <div class="cute-3-tablet">
-            <div class="box">
-                <p>cute-4-tablet</p>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
             </div>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
+            </div>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
+            </div>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
+            </div>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
+            </div>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
+            </div>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
+            </div>
+            <div class="idea-padding idea-4-phone idea-3-tablet idea-2-laptop idea-1-desktop">
+            </div> 
         </div>
-    </div>
+        
+        <div class="idea-row">
+            <h2>Offset test</h2>
+        </div>
+        <div class="idea-row margin-2 grid-3-ls-phone">
+            <div class="idea-padding idea-4-ls-phone">                
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div class="idea-padding idea-4-ls-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div class="idea-padding idea-4-ls-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div class="idea-padding idea-4-ls-phone idea-2-ls-phone-offset">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div class="idea-padding idea-4-ls-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+        </div>        
+        
+        
+        <div class="idea-row">
+            <h2>Alternate test</h2>
+        </div>
+        <div class="idea-row margin-4 grid-2-phone alternate-2-first-ls-phone laptop-f-reset alternate-2-second-desktop">
+            <div style="height:140px;" class="idea-padding idea-3-phone violet">
+                <h3>Cras ornare tristique elit.</h3>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-9-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-3-phone violet">
+                <h3>Cras ornare tristique elit.</h3>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-9-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-3-phone violet">
+                <h3>Cras ornare tristique elit.</h3>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-9-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-3-phone violet">
+                <h3>Cras ornare tristique elit.</h3>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-9-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-3-phone violet">
+                <h3>Cras ornare tristique elit.</h3>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-9-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-3-phone violet">
+                <h3>Cras ornare tristique elit.</h3>
+            </div>
+            <div style="height:140px;" class="idea-padding idea-9-phone">
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+        </div> 
+        
+        <div class="idea-row">
+            <h2>Arval test</h2>
+        </div>
+        <div class="idea-row grid-2-phone arval-test alternate-2-second-ls-phone tablet-f-reset">
+            <div class="idea-3-phone idea-6-ls-phone idea-3-tablet violet">
+            </div>
+            <div class="idea-9-phone idea-6-ls-phone idea-3-tablet">
+            </div>
+            <div class="idea-3-phone idea-6-ls-phone idea-3-tablet violet">
+            </div>
+            <div class="idea-9-phone idea-6-ls-phone idea-3-tablet">
+            </div>
+            <div class="idea-3-phone idea-6-ls-phone idea-3-tablet violet idea-right-tablet">
+            </div>
+            <div class="idea-9-phone idea-6-ls-phone idea-3-tablet idea-right-tablet">
+            </div>
+            <div class="idea-3-phone idea-6-ls-phone idea-3-tablet violet idea-right-tablet">
+            </div>
+            <div class="idea-9-phone idea-6-ls-phone idea-3-tablet idea-right-tablet">
+            </div>
+            <div class="idea-3-phone idea-6-ls-phone idea-3-tablet violet">
+            </div>
+            <div class="idea-9-phone idea-6-ls-phone idea-3-tablet">
+            </div>
+            <div class="idea-3-phone idea-6-ls-phone idea-3-tablet violet">
+            </div>
+            <div class="idea-9-phone idea-6-ls-phone idea-3-tablet">
+            </div>
+            <div class="idea-3-phone idea-6-ls-phone idea-3-tablet violet idea-right-tablet">
+            </div>
+            <div class="idea-9-phone idea-6-ls-phone idea-3-tablet idea-right-tablet">
+            </div>
+            <div class="idea-3-phone idea-6-ls-phone idea-3-tablet violet idea-right-tablet">
+            </div>
+            <div class="idea-9-phone idea-6-ls-phone idea-3-tablet idea-right-tablet">
+            </div>
+        </div>        
+        
+    
+    </div> <!-- .container --> 
 </body>
 </html>

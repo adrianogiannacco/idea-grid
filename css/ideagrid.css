@@ -1,0 +1,772 @@
+/*
+*
+* idea Grid v 0.1
+* Copyright 2016 Adriano Giannacco, Ideidea Srl
+*
+*/
+
+/* Clearfix */
+.idea-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+[class*='idea-'] {
+    float: left;
+    position: relative;
+    width:100%;
+    box-sizing: border-box;
+/*    Default margin bottom for grids*/
+    margin-bottom: 20px;
+}
+.idea-padding {
+    padding: 14px;
+}
+
+.idea-left {
+  float: left !important;
+}
+.idea-right {
+  float: right !important;
+}
+
+
+/*
+==============================================================================================
+==============================================================================================
+            Changing FLOAT directions
+==============================================================================================
+==============================================================================================
+*/
+@media screen and (min-width: 480px) {
+    .idea-right-ls-phone { float: right !important; }
+    .idea-left-ls-phone { float: left !important; }
+}
+@media screen and (min-width: 768px) {
+    .idea-right-tablet { float: right !important; }
+    .idea-left-tablet { float: left !important; }
+}
+@media screen and (min-width: 980px) {
+    .idea-right-laptop { float: right !important; }
+    .idea-left-laptop { float: left !important; }
+}
+@media screen and (min-width: 1200px) {
+    .idea-right-desktop { float: right !important; }
+    .idea-left-desktop { float: left !important; }
+}
+
+
+/*
+==============================================================================================
+==============================================================================================
+            MARGINS AND RESPONSIVE LAST CHILDREN
+==============================================================================================
+==============================================================================================
+*/
+.margin-1 [class*='idea-'] { margin-right: 1.6%; }
+.margin-2 [class*='idea-'] { margin-right: 3.2%; }
+.margin-3 [class*='idea-'] { margin-right: 4.8%; }
+.margin-4 [class*='idea-'] { margin-right: 6.4%; }
+
+@media only screen {
+    .grid-2-phone [class*='idea-']:nth-child(2n) { margin-right: 0;}
+    .grid-3-phone [class*='idea-']:nth-child(3n) { margin-right: 0;}
+    .grid-4-phone [class*='idea-']:nth-child(4n) { margin-right: 0;}
+    .grid-5-phone [class*='idea-']:nth-child(5n) { margin-right: 0;}
+    .grid-6-phone [class*='idea-']:nth-child(6n) { margin-right: 0;}
+    .grid-7-phone [class*='idea-']:nth-child(7n) { margin-right: 0;}
+    .grid-8-phone [class*='idea-']:nth-child(8n) { margin-right: 0;}
+    .grid-9-phone [class*='idea-']:nth-child(9n) { margin-right: 0;}
+    .grid-10-phone [class*='idea-']:nth-child(10n) { margin-right: 0;}
+    .grid-11-phone [class*='idea-']:nth-child(11n) { margin-right: 0;}
+    .grid-12-phone [class*='idea-']:nth-child(12n) { margin-right: 0;}
+}
+@media only screen and (min-width: 480px) {
+    .margin-1.ls-phone-m-reset [class*='idea-'] { margin-right: 1.6%;}
+    .margin-2.ls-phone-m-reset [class*='idea-'] { margin-right: 3.2%;}
+    .margin-3.ls-phone-m-reset [class*='idea-'] { margin-right: 4.8%;}
+    .margin-4.ls-phone-m-reset [class*='idea-'] { margin-right: 6.4%;}
+
+    .grid-2-ls-phone [class*='idea-']:nth-child(2n) { margin-right: 0;}
+    .grid-3-ls-phone [class*='idea-']:nth-child(3n) { margin-right: 0;}
+    .grid-4-ls-phone [class*='idea-']:nth-child(4n) { margin-right: 0;}
+    .grid-5-ls-phone [class*='idea-']:nth-child(5n) { margin-right: 0;}
+    .grid-6-ls-phone [class*='idea-']:nth-child(6n) { margin-right: 0;}
+    .grid-7-ls-phone [class*='idea-']:nth-child(7n) { margin-right: 0;}
+    .grid-8-ls-phone [class*='idea-']:nth-child(8n) { margin-right: 0;}
+    .grid-9-ls-phone [class*='idea-']:nth-child(9n) { margin-right: 0;}
+    .grid-10-ls-phone [class*='idea-']:nth-child(10n) { margin-right: 0;}
+    .grid-11-ls-phone [class*='idea-']:nth-child(11n) { margin-right: 0;}
+    .grid-12-ls-phone [class*='idea-']:nth-child(12n) { margin-right: 0;}
+}
+@media only screen and (min-width: 768px) {
+    .margin-1.tablet-m-reset [class*='idea-'] { margin-right: 1.6%;}
+    .margin-2.tablet-m-reset [class*='idea-'] { margin-right: 3.2%;}
+    .margin-3.tablet-m-reset [class*='idea-'] { margin-right: 4.8%;}
+    .margin-4.tablet-m-reset [class*='idea-'] { margin-right: 6.4%;}
+
+    .grid-2-tablet [class*='idea-']:nth-child(2n) { margin-right: 0;}
+    .grid-3-tablet [class*='idea-']:nth-child(3n) { margin-right: 0;}
+    .grid-4-tablet [class*='idea-']:nth-child(4n) { margin-right: 0;}
+    .grid-5-tablet [class*='idea-']:nth-child(5n) { margin-right: 0;}
+    .grid-6-tablet [class*='idea-']:nth-child(6n) { margin-right: 0;}
+    .grid-7-tablet [class*='idea-']:nth-child(7n) { margin-right: 0;}
+    .grid-8-tablet [class*='idea-']:nth-child(8n) { margin-right: 0;}
+    .grid-9-tablet [class*='idea-']:nth-child(9n) { margin-right: 0;}
+    .grid-10-tablet [class*='idea-']:nth-child(10n) { margin-right: 0;}
+    .grid-11-tablet [class*='idea-']:nth-child(11n) { margin-right: 0;}
+    .grid-12-tablet [class*='idea-']:nth-child(12n) { margin-right: 0;}
+}
+@media only screen and (min-width: 980px) {
+    .margin-1.laptop-m-reset [class*='idea-'] { margin-right: 1.6%;}
+    .margin-2.laptop-m-reset [class*='idea-'] { margin-right: 3.2%;}
+    .margin-3.laptop-m-reset [class*='idea-'] { margin-right: 4.8%;}
+    .margin-4.laptop-m-reset [class*='idea-'] { margin-right: 6.4%;}
+
+    .grid-2-laptop [class*='idea-']:nth-child(2n) { margin-right: 0;}
+    .grid-3-laptop [class*='idea-']:nth-child(3n) { margin-right: 0;}
+    .grid-4-laptop [class*='idea-']:nth-child(4n) { margin-right: 0;}
+    .grid-5-laptop [class*='idea-']:nth-child(5n) { margin-right: 0;}
+    .grid-6-laptop [class*='idea-']:nth-child(6n) { margin-right: 0;}
+    .grid-7-laptop [class*='idea-']:nth-child(7n) { margin-right: 0;}
+    .grid-8-laptop [class*='idea-']:nth-child(8n) { margin-right: 0;}
+    .grid-9-laptop [class*='idea-']:nth-child(9n) { margin-right: 0;}
+    .grid-10-laptop [class*='idea-']:nth-child(10n) { margin-right: 0;}
+    .grid-11-laptop [class*='idea-']:nth-child(11n) { margin-right: 0;}
+    .grid-12-laptop [class*='idea-']:nth-child(12n) { margin-right: 0;}
+}
+@media only screen and (min-width: 1200px) {
+    .margin-1.desktop-m-reset [class*='idea-'] { margin-right: 1.6%;}
+    .margin-2.desktop-m-reset [class*='idea-'] { margin-right: 3.2%;}
+    .margin-3.desktop-m-reset [class*='idea-'] { margin-right: 4.8%;}
+    .margin-4.desktop-m-reset [class*='idea-'] { margin-right: 6.4%;}
+
+    .grid-2-desktop [class*='idea-']:nth-child(2n) { margin-right: 0;}
+    .grid-3-desktop [class*='idea-']:nth-child(3n) { margin-right: 0;}
+    .grid-4-desktop [class*='idea-']:nth-child(4n) { margin-right: 0;}
+    .grid-5-desktop [class*='idea-']:nth-child(5n) { margin-right: 0;}
+    .grid-6-desktop [class*='idea-']:nth-child(6n) { margin-right: 0;}
+    .grid-7-desktop [class*='idea-']:nth-child(7n) { margin-right: 0;}
+    .grid-8-desktop [class*='idea-']:nth-child(8n) { margin-right: 0;}
+    .grid-9-desktop [class*='idea-']:nth-child(9n) { margin-right: 0;}
+    .grid-10-desktop [class*='idea-']:nth-child(10n) { margin-right: 0;}
+    .grid-11-desktop [class*='idea-']:nth-child(11n) { margin-right: 0;}
+    .grid-12-desktop [class*='idea-']:nth-child(12n) { margin-right: 0;}
+}
+
+
+/*
+==============================================================================================
+==============================================================================================
+            ALTERNATE ROWS
+==============================================================================================
+==============================================================================================
+*/
+@media only screen and (min-width: 480px) {
+    .alternate-2-first-ls-phone [class*='idea-']:nth-child(4n+2),
+    .alternate-2-first-ls-phone [class*='idea-']:nth-child(4n+1) {
+        float: right;
+    }
+    .margin-1.alternate-2-first-ls-phone [class*='idea-']:nth-child(4n+2) { margin-right: 1.6%; }
+    .margin-2.alternate-2-first-ls-phone [class*='idea-']:nth-child(4n+2) { margin-right: 3.2%; }
+    .margin-3.alternate-2-first-ls-phone [class*='idea-']:nth-child(4n+2) { margin-right: 4.8%; }
+    .margin-4.alternate-2-first-ls-phone [class*='idea-']:nth-child(4n+2) { margin-right: 6.4%; }
+    .idea-row.alternate-2-first-ls-phone [class*='idea-']:nth-child(4n+1) { margin-right: 0; }
+
+    .alternate-2-second-ls-phone [class*='idea-']:nth-child(4n+3),
+    .alternate-2-second-ls-phone [class*='idea-']:nth-child(4n) {
+        float: right;
+    }
+    .margin-1.alternate-2-second-ls-phone [class*='idea-']:nth-child(4n) { margin-right: 1.6%; }
+    .margin-2.alternate-2-second-ls-phone [class*='idea-']:nth-child(4n) { margin-right: 3.2%; }
+    .margin-3.alternate-2-second-ls-phone [class*='idea-']:nth-child(4n) { margin-right: 4.8%; }
+    .margin-4.alternate-2-second-ls-phone [class*='idea-']:nth-child(4n) { margin-right: 6.4%; }
+    .idea-row.alternate-2-second-ls-phone [class*='idea-']:nth-child(4n+3) { margin-right: 0; }
+}
+
+@media only screen and (min-width: 768px) {
+    .alternate-2-first-tablet [class*='idea-']:nth-child(4n+2),
+    .alternate-2-first-tablet [class*='idea-']:nth-child(4n+1) {
+        float: right;
+    }
+    .margin-1.alternate-2-first-tablet [class*='idea-']:nth-child(4n+2) { margin-right: 1.6%; }
+    .margin-2.alternate-2-first-tablet [class*='idea-']:nth-child(4n+2) { margin-right: 3.2%; }
+    .margin-3.alternate-2-first-tablet [class*='idea-']:nth-child(4n+2) { margin-right: 4.8%; }
+    .margin-4.alternate-2-first-tablet [class*='idea-']:nth-child(4n+2) { margin-right: 6.4%; }
+    .idea-row.alternate-2-first-tablet [class*='idea-']:nth-child(4n+1) { margin-right: 0; }
+
+    .alternate-2-second-tablet [class*='idea-']:nth-child(4n+3),
+    .alternate-2-second-tablet [class*='idea-']:nth-child(4n) {
+        float: right;
+    }
+    .margin-1.alternate-2-second-tablet [class*='idea-']:nth-child(4n) { margin-right: 1.6%; }
+    .margin-2.alternate-2-second-tablet [class*='idea-']:nth-child(4n) { margin-right: 3.2%; }
+    .margin-3.alternate-2-second-tablet [class*='idea-']:nth-child(4n) { margin-right: 4.8%; }
+    .margin-4.alternate-2-second-tablet [class*='idea-']:nth-child(4n) { margin-right: 6.4%; }
+    .idea-row.alternate-2-second-tablet [class*='idea-']:nth-child(4n+3) { margin-right: 0; }
+
+    [class*='alternate-'].tablet-f-reset [class*='idea-'] { float: left; }
+    [class*='alternate-'].margin-1.tablet-f-reset [class*='idea-'] { margin-right: 1.6%; }
+    [class*='alternate-'].margin-2.tablet-f-reset [class*='idea-'] { margin-right: 3.2%; }
+    [class*='alternate-'].margin-3.tablet-f-reset [class*='idea-'] { margin-right: 4.8%; }
+    [class*='alternate-'].margin-4.tablet-f-reset [class*='idea-'] { margin-right: 6.4%; }
+    [class*='alternate-'].tablet-f-reset [class*='idea-']:nth-child(2n) { margin-right: 0; }
+}
+
+@media only screen and (min-width: 980px) {
+    .alternate-2-first-laptop [class*='idea-']:nth-child(4n+2),
+    .alternate-2-first-laptop [class*='idea-']:nth-child(4n+1) {
+        float: right;
+    }
+    .margin-1.alternate-2-first-laptop [class*='idea-']:nth-child(4n+2) { margin-right: 1.6%; }
+    .margin-2.alternate-2-first-laptop [class*='idea-']:nth-child(4n+2) { margin-right: 3.2%; }
+    .margin-3.alternate-2-first-laptop [class*='idea-']:nth-child(4n+2) { margin-right: 4.8%; }
+    .margin-4.alternate-2-first-laptop [class*='idea-']:nth-child(4n+2) { margin-right: 6.4%; }
+    .idea-row.alternate-2-first-laptop [class*='idea-']:nth-child(4n+1) { margin-right: 0; }
+
+    .alternate-2-second-laptop [class*='idea-']:nth-child(4n+3),
+    .alternate-2-second-laptop [class*='idea-']:nth-child(4n) {
+        float: right;
+    }
+    .margin-1.alternate-2-second-laptop [class*='idea-']:nth-child(4n) { margin-right: 1.6%; }
+    .margin-2.alternate-2-second-laptop [class*='idea-']:nth-child(4n) { margin-right: 3.2%; }
+    .margin-3.alternate-2-second-laptop [class*='idea-']:nth-child(4n) { margin-right: 4.8%; }
+    .margin-4.alternate-2-second-laptop [class*='idea-']:nth-child(4n) { margin-right: 6.4%; }
+    .idea-row.alternate-2-second-laptop [class*='idea-']:nth-child(4n+3) { margin-right: 0; }
+
+    [class*='alternate-'].laptop-f-reset [class*='idea-'] { float: left; }
+    [class*='alternate-'].margin-1.laptop-f-reset [class*='idea-'] { margin-right: 1.6%; }
+    [class*='alternate-'].margin-2.laptop-f-reset [class*='idea-'] { margin-right: 3.2%; }
+    [class*='alternate-'].margin-3.laptop-f-reset [class*='idea-'] { margin-right: 4.8%; }
+    [class*='alternate-'].margin-4.laptop-f-reset [class*='idea-'] { margin-right: 6.4%; }
+    [class*='alternate-'].laptop-f-reset [class*='idea-']:nth-child(2n) { margin-right: 0; }
+}
+@media only screen and (min-width: 1200px) {
+    .alternate-2-first-desktop [class*='idea-']:nth-child(4n+2),
+    .alternate-2-first-desktop [class*='idea-']:nth-child(4n+1) {
+        float: right;
+    }
+    .margin-1.alternate-2-first-desktop [class*='idea-']:nth-child(4n+2) { margin-right: 1.6%; }
+    .margin-2.alternate-2-first-desktop [class*='idea-']:nth-child(4n+2) { margin-right: 3.2%; }
+    .margin-3.alternate-2-first-desktop [class*='idea-']:nth-child(4n+2) { margin-right: 4.8%; }
+    .margin-4.alternate-2-first-desktop [class*='idea-']:nth-child(4n+2) { margin-right: 6.4%; }
+    .idea-row.alternate-2-first-desktop [class*='idea-']:nth-child(4n+1) { margin-right: 0; }
+
+    .alternate-2-second-desktop [class*='idea-']:nth-child(4n+3),
+    .alternate-2-second-desktop [class*='idea-']:nth-child(4n) {
+        float: right;
+    }
+    .margin-1.alternate-2-second-desktop [class*='idea-']:nth-child(4n) { margin-right: 1.6%; }
+    .margin-2.alternate-2-second-desktop [class*='idea-']:nth-child(4n) { margin-right: 3.2%; }
+    .margin-3.alternate-2-second-desktop [class*='idea-']:nth-child(4n) { margin-right: 4.8%; }
+    .margin-4.alternate-2-second-desktop [class*='idea-']:nth-child(4n) { margin-right: 6.4%; }
+    .idea-row.alternate-2-second-desktop [class*='idea-']:nth-child(4n+3) { margin-right: 0; }
+
+    [class*='alternate-'].desktop-f-reset [class*='idea-'] { float: left; }
+    [class*='alternate-'].margin-1.desktop-f-reset [class*='idea-'] { margin-right: 1.6%; }
+    [class*='alternate-'].margin-2.desktop-f-reset [class*='idea-'] { margin-right: 3.2%; }
+    [class*='alternate-'].margin-3.desktop-f-reset [class*='idea-'] { margin-right: 4.8%; }
+    [class*='alternate-'].margin-4.desktop-f-reset [class*='idea-'] { margin-right: 6.4%; }
+    [class*='alternate-'].desktop-f-reset [class*='idea-']:nth-child(2n) { margin-right: 0; }
+}
+
+
+/*
+==============================================================================================
+==============================================================================================
+            PHONE Portrait  ---->   320 px
+==============================================================================================
+==============================================================================================
+*/
+@media only screen {
+
+    .idea-1-phone { width: 8.3333333333333%; }
+    .idea-2-phone { width: 16.666666666667%; }
+    .idea-3-phone { width: 25%; }
+    .idea-4-phone { width: 33.333333333333%; }
+    .idea-5-phone { width: 41.666666666667%; }
+    .idea-6-phone { width: 50%; }
+    .idea-7-phone { width: 58.333333333333%; }
+    .idea-8-phone { width: 66.666666666667%; }
+    .idea-9-phone { width: 75%; }
+    .idea-10-phone { width: 83.333333333333%; }
+    .idea-11-phone { width: 91.666666666667%; }
+    .idea-12-phone { width: 100%; }
+
+    /* Width with MARGINS */
+    .margin-1 .idea-1-phone { width: 6.86666666%; }
+    .margin-1 .idea-2-phone { width: 15.33333333%; }
+    .margin-1 .idea-3-phone { width: 23.8%; }
+    .margin-1 .idea-4-phone { width: 32.26666666%; }
+    .margin-1 .idea-5-phone { width: 40.73333333%; }
+    .margin-1 .idea-6-phone { width: 49.2%; }
+    .margin-1 .idea-7-phone { width: 57.66666666%; }
+    .margin-1 .idea-8-phone { width: 66.13333333%; }
+    .margin-1 .idea-9-phone { width: 74.6%; }
+    .margin-1 .idea-10-phone { width: 83.06666666%; }
+    .margin-1 .idea-11-phone { width: 91.53333333%; }
+    .margin-1 .idea-12-phone { margin-right: 0; }
+
+    .margin-2 .idea-1-phone { width: 5.4%; }
+    .margin-2 .idea-2-phone { width: 14%; }
+    .margin-2 .idea-3-phone { width: 22.6%; }
+    .margin-2 .idea-4-phone { width: 31.2%; }
+    .margin-2 .idea-5-phone { width: 39.8%; }
+    .margin-2 .idea-6-phone { width: 48.4%; }
+    .margin-2 .idea-7-phone { width: 57%; }
+    .margin-2 .idea-8-phone { width: 65.6%; }
+    .margin-2 .idea-9-phone { width: 74.2%; }
+    .margin-2 .idea-10-phone { width: 82.8%; }
+    .margin-2 .idea-11-phone { width: 91.4%; }
+    .margin-2 .idea-12-phone { margin-right: 0; }
+
+    .margin-3 .idea-1-phone { width: 3.93333333%; }
+    .margin-3 .idea-2-phone { width: 12.66666666%; }
+    .margin-3 .idea-3-phone { width: 21.4%; }
+    .margin-3 .idea-4-phone { width: 30.13333333%; }
+    .margin-3 .idea-5-phone { width: 38.86666666%; }
+    .margin-3 .idea-6-phone { width: 47.6%; }
+    .margin-3 .idea-7-phone { width: 56.33333333%; }
+    .margin-3 .idea-8-phone { width: 65.06666666%; }
+    .margin-3 .idea-9-phone { width: 73.8%; }
+    .margin-3 .idea-10-phone { width: 82.53333333%; }
+    .margin-3 .idea-11-phone { width: 91.26666666%; }
+    .margin-3 .idea-12-phone { margin-right: 0; }
+
+    .margin-4 .idea-1-phone { width: 2.46666666%; }
+    .margin-4 .idea-2-phone { width: 11.33333333%; }
+    .margin-4 .idea-3-phone { width: 20.2%; }
+    .margin-4 .idea-4-phone { width: 29.06666666%; }
+    .margin-4 .idea-5-phone { width: 37.93333333%; }
+    .margin-4 .idea-6-phone { width: 46.8%; }
+    .margin-4 .idea-7-phone { width: 55.66666666%; }
+    .margin-4 .idea-8-phone { width: 64.53333333%; }
+    .margin-4 .idea-9-phone { width: 73.4%; }
+    .margin-4 .idea-10-phone { width: 82.26666666%; }
+    .margin-4 .idea-11-phone { width: 91.13333333%; }
+    .margin-4 .idea-12-phone { margin-right: 0; }
+
+
+    /* offset for phone size */
+    .idea-0-phone-offset { margin: 0; }
+    .idea-1-phone-offset { margin-left: 8.3333333333333%; }
+    .idea-2-phone-offset { margin-left: 16.666666666667%; }
+    .idea-3-phone-offset { margin-left: 25%; }
+    .idea-4-phone-offset { margin-left: 33.333333333333%; }
+    .idea-5-phone-offset { margin-left: 41.666666666667%; }
+    .idea-6-phone-offset { margin-left: 50%; }
+    .idea-7-phone-offset { margin-left: 58.333333333333%; }
+    .idea-8-phone-offset { margin-left: 66.666666666667%; }
+    .idea-9-phone-offset { margin-left: 75%; }
+    .idea-10-phone-offset { margin-left: 83.333333333333%; }
+    .idea-11-phone-offset { margin-left: 91.666666666667%; }
+
+
+
+}
+/*
+==============================================================================================
+==============================================================================================
+            PHONE Landscape   ---->   480 px
+==============================================================================================
+==============================================================================================
+*/
+
+
+@media only screen and (min-width: 480px) {
+
+    .idea-1-ls-phone { width: 8.3333333333333%; }
+    .idea-2-ls-phone { width: 16.666666666667%; }
+    .idea-3-ls-phone { width: 25%; }
+    .idea-4-ls-phone { width: 33.333333333333%; }
+    .idea-5-ls-phone { width: 41.666666666667%; }
+    .idea-6-ls-phone { width: 50%; }
+    .idea-7-ls-phone { width: 58.333333333333%; }
+    .idea-8-ls-phone { width: 66.666666666667%; }
+    .idea-9-ls-phone { width: 75%; }
+    .idea-10-ls-phone { width: 83.333333333333%; }
+    .idea-11-ls-phone { width: 91.666666666667%; }
+    .idea-12-ls-phone { width: 100%; }
+
+    /* Width with MARGINS */
+    .margin-1 .idea-1-ls-phone { width: 6.86666666%; }
+    .margin-1 .idea-2-ls-phone { width: 15.33333333%; }
+    .margin-1 .idea-3-ls-phone { width: 23.8%; }
+    .margin-1 .idea-4-ls-phone { width: 32.26666666%; }
+    .margin-1 .idea-5-ls-phone { width: 40.73333333%; }
+    .margin-1 .idea-6-ls-phone { width: 49.2%; }
+    .margin-1 .idea-7-ls-phone { width: 57.66666666%; }
+    .margin-1 .idea-8-ls-phone { width: 66.13333333%; }
+    .margin-1 .idea-9-ls-phone { width: 74.6%; }
+    .margin-1 .idea-10-ls-phone { width: 83.06666666%; }
+    .margin-1 .idea-11-ls-phone { width: 91.53333333%; }
+    .margin-1 .idea-12-phone { margin-right: 0; }
+
+    .margin-2 .idea-1-ls-phone { width: 5.4%; }
+    .margin-2 .idea-2-ls-phone { width: 14%; }
+    .margin-2 .idea-3-ls-phone { width: 22.6%; }
+    .margin-2 .idea-4-ls-phone { width: 31.2%; }
+    .margin-2 .idea-5-ls-phone { width: 39.8%; }
+    .margin-2 .idea-6-ls-phone { width: 48.4%; }
+    .margin-2 .idea-7-ls-phone { width: 57%; }
+    .margin-2 .idea-8-ls-phone { width: 65.6%; }
+    .margin-2 .idea-9-ls-phone { width: 74.2%; }
+    .margin-2 .idea-10-ls-phone { width: 82.8%; }
+    .margin-2 .idea-11-ls-phone { width: 91.4%; }
+    .margin-2 .idea-12-ls-phone { margin-right: 0; }
+
+    .margin-3 .idea-1-ls-phone { width: 3.93333333%; }
+    .margin-3 .idea-2-ls-phone { width: 12.66666666%; }
+    .margin-3 .idea-3-ls-phone { width: 21.4%; }
+    .margin-3 .idea-4-ls-phone { width: 30.13333333%; }
+    .margin-3 .idea-5-ls-phone { width: 38.86666666%; }
+    .margin-3 .idea-6-ls-phone { width: 47.6%; }
+    .margin-3 .idea-7-ls-phone { width: 56.33333333%; }
+    .margin-3 .idea-8-ls-phone { width: 65.06666666%; }
+    .margin-3 .idea-9-ls-phone { width: 73.8%; }
+    .margin-3 .idea-10-ls-phone { width: 82.53333333%; }
+    .margin-3 .idea-11-ls-phone { width: 91.26666666%; }
+    .margin-3 .idea-12-ls-phone { margin-right: 0; }
+
+    .margin-4 .idea-1-ls-phone { width: 2.46666666%; }
+    .margin-4 .idea-2-ls-phone { width: 11.33333333%; }
+    .margin-4 .idea-3-ls-phone { width: 20.2%; }
+    .margin-4 .idea-4-ls-phone { width: 29.06666666%; }
+    .margin-4 .idea-5-ls-phone { width: 37.93333333%; }
+    .margin-4 .idea-6-ls-phone { width: 46.8%; }
+    .margin-4 .idea-7-ls-phone { width: 55.66666666%; }
+    .margin-4 .idea-8-ls-phone { width: 64.53333333%; }
+    .margin-4 .idea-9-ls-phone { width: 73.4%; }
+    .margin-4 .idea-10-ls-phone { width: 82.26666666%; }
+    .margin-4 .idea-11-ls-phone { width: 91.13333333%; }
+    .margin-4 .idea-12-ls-phone { margin-right: 0; }
+
+
+    /* offset for phone size */
+    .idea-0-ls-phone-offset { margin: 0; }
+    .idea-1-ls-phone-offset { margin-left: 8.3333333333333%; }
+    .idea-2-ls-phone-offset { margin-left: 16.666666666667%; }
+    .idea-3-ls-phone-offset { margin-left: 25%; }
+    .idea-4-ls-phone-offset { margin-left: 33.333333333333%; }
+    .idea-5-ls-phone-offset { margin-left: 41.666666666667%; }
+    .idea-6-ls-phone-offset { margin-left: 50%; }
+    .idea-7-ls-phone-offset { margin-left: 58.333333333333%; }
+    .idea-8-ls-phone-offset { margin-left: 66.666666666667%; }
+    .idea-9-ls-phone-offset { margin-left: 75%; }
+    .idea-10-ls-phone-offset { margin-left: 83.333333333333%; }
+    .idea-11-ls-phone-offset { margin-left: 91.666666666667%; }
+
+
+}
+
+
+/*
+==============================================================================================
+==============================================================================================
+            TABLET   ---->   768 px
+==============================================================================================
+==============================================================================================
+*/
+@media only screen and (min-width: 768px) {
+    .idea-1-tablet { width: 8.3333333333333%; }
+    .idea-2-tablet { width: 16.666666666667%; }
+    .idea-3-tablet { width: 25%; }
+    .idea-4-tablet { width: 33.333333333333%; }
+    .idea-5-tablet { width: 41.666666666667%; }
+    .idea-6-tablet { width: 50%; }
+    .idea-7-tablet { width: 58.333333333333%; }
+    .idea-8-tablet { width: 66.666666666667%; }
+    .idea-9-tablet { width: 75%; }
+    .idea-10-tablet { width: 83.333333333333%; }
+    .idea-11-tablet { width: 91.666666666667%; }
+    .idea-12-tablet { width: 100%; }
+
+    /* Width with MARGINS */
+    .margin-1 .idea-1-tablet { width: 6.86666666%; }
+    .margin-1 .idea-2-tablet { width: 15.33333333%; }
+    .margin-1 .idea-3-tablet { width: 23.8%; }
+    .margin-1 .idea-4-tablet { width: 32.26666666%; }
+    .margin-1 .idea-5-tablet { width: 40.73333333%; }
+    .margin-1 .idea-6-tablet { width: 49.2%; }
+    .margin-1 .idea-7-tablet { width: 57.66666666%; }
+    .margin-1 .idea-8-tablet { width: 66.13333333%; }
+    .margin-1 .idea-9-tablet { width: 74.6%; }
+    .margin-1 .idea-10-tablet { width: 83.06666666%; }
+    .margin-1 .idea-11-tablet { width: 91.53333333%; }
+    .margin-1 .idea-12-tablet { margin-right: 0; }
+
+    .margin-2 .idea-1-tablet { width: 5.4%; }
+    .margin-2 .idea-2-tablet { width: 14%; }
+    .margin-2 .idea-3-tablet { width: 22.6%; }
+    .margin-2 .idea-4-tablet { width: 31.2%; }
+    .margin-2 .idea-5-tablet { width: 39.8%; }
+    .margin-2 .idea-6-tablet { width: 48.4%; }
+    .margin-2 .idea-7-tablet { width: 57%; }
+    .margin-2 .idea-8-tablet { width: 65.6%; }
+    .margin-2 .idea-9-tablet { width: 74.2%; }
+    .margin-2 .idea-10-tablet { width: 82.8%; }
+    .margin-2 .idea-11-tablet { width: 91.4%; }
+    .margin-2 .idea-12-tablet { margin-right: 0; }
+
+    .margin-3 .idea-1-tablet { width: 3.93333333%; }
+    .margin-3 .idea-2-tablet { width: 12.66666666%; }
+    .margin-3 .idea-3-tablet { width: 21.4%; }
+    .margin-3 .idea-4-tablet { width: 30.13333333%; }
+    .margin-3 .idea-5-tablet { width: 38.86666666%; }
+    .margin-3 .idea-6-tablet { width: 47.6%; }
+    .margin-3 .idea-7-tablet { width: 56.33333333%; }
+    .margin-3 .idea-8-tablet { width: 65.06666666%; }
+    .margin-3 .idea-9-tablet { width: 73.8%; }
+    .margin-3 .idea-10-tablet { width: 82.53333333%; }
+    .margin-3 .idea-11-tablet { width: 91.26666666%; }
+    .margin-3 .idea-12-tablet { margin-right: 0; }
+
+    .margin-4 .idea-1-tablet { width: 2.46666666%; }
+    .margin-4 .idea-2-tablet { width: 11.33333333%; }
+    .margin-4 .idea-3-tablet { width: 20.2%; }
+    .margin-4 .idea-4-tablet { width: 29.06666666%; }
+    .margin-4 .idea-5-tablet { width: 37.93333333%; }
+    .margin-4 .idea-6-tablet { width: 46.8%; }
+    .margin-4 .idea-7-tablet { width: 55.66666666%; }
+    .margin-4 .idea-8-tablet { width: 64.53333333%; }
+    .margin-4 .idea-9-tablet { width: 73.4%; }
+    .margin-4 .idea-10-tablet { width: 82.26666666%; }
+    .margin-4 .idea-11-tablet { width: 91.13333333%; }
+    .margin-4 .idea-12-tablet { margin-right: 0; }
+
+    /* offset for tablet screen widths */
+    .idea-0-tablet-offset { margin: 0; }
+    .idea-1-tablet-offset { margin-left: 8.3333333333333%; }
+    .idea-2-tablet-offset { margin-left: 16.666666666667%; }
+    .idea-3-tablet-offset { margin-left: 25%; }
+    .idea-4-tablet-offset { margin-left: 33.333333333333%; }
+    .idea-5-tablet-offset { margin-left: 41.666666666667%; }
+    .idea-6-tablet-offset { margin-left: 50%; }
+    .idea-7-tablet-offset { margin-left: 58.333333333333%; }
+    .idea-8-tablet-offset { margin-left: 66.666666666667%; }
+    .idea-9-tablet-offset { margin-left: 75%; }
+    .idea-10-tablet-offset { margin-left: 83.333333333333%; }
+    .idea-11-tablet-offset { margin-left: 91.666666666667%; }
+
+}
+/*
+==============================================================================================
+==============================================================================================
+            LAPTOP   ---->   980 px
+==============================================================================================
+==============================================================================================
+*/
+@media only screen and (min-width: 980px) {
+    .idea-1-laptop { width: 8.3333333333333%; }
+    .idea-2-laptop { width: 16.666666666667%; }
+    .idea-3-laptop { width: 25%; }
+    .idea-4-laptop { width: 33.333333333333%; }
+    .idea-5-laptop { width: 41.666666666667%; }
+    .idea-6-laptop { width: 50%; }
+    .idea-7-laptop { width: 58.333333333333%; }
+    .idea-8-laptop { width: 66.666666666667%; }
+    .idea-9-laptop { width: 75%; }
+    .idea-10-laptop { width: 83.333333333333%; }
+    .idea-11-laptop { width: 91.666666666667%; }
+    .idea-12-laptop { width: 100%; }
+
+    /* Width with MARGINS */
+    .margin-1 .idea-1-laptop { width: 6.86666666%; }
+    .margin-1 .idea-2-laptop { width: 15.33333333%; }
+    .margin-1 .idea-3-laptop { width: 23.8%; }
+    .margin-1 .idea-4-laptop { width: 32.26666666%; }
+    .margin-1 .idea-5-laptop { width: 40.73333333%; }
+    .margin-1 .idea-6-laptop { width: 49.2%; }
+    .margin-1 .idea-7-laptop { width: 57.66666666%; }
+    .margin-1 .idea-8-laptop { width: 66.13333333%; }
+    .margin-1 .idea-9-laptop { width: 74.6%; }
+    .margin-1 .idea-10-laptop { width: 83.06666666%; }
+    .margin-1 .idea-11-laptop { width: 91.53333333%; }
+    .margin-1 .idea-12-laptop { margin-right: 0; }
+
+    .margin-2 .idea-1-laptop { width: 5.4%; }
+    .margin-2 .idea-2-laptop { width: 14%; }
+    .margin-2 .idea-3-laptop { width: 22.6%; }
+    .margin-2 .idea-4-laptop { width: 31.2%; }
+    .margin-2 .idea-5-laptop { width: 39.8%; }
+    .margin-2 .idea-6-laptop { width: 48.4%; }
+    .margin-2 .idea-7-laptop { width: 57%; }
+    .margin-2 .idea-8-laptop { width: 65.6%; }
+    .margin-2 .idea-9-laptop { width: 74.2%; }
+    .margin-2 .idea-10-laptop { width: 82.8%; }
+    .margin-2 .idea-11-laptop { width: 91.4%; }
+    .margin-2 .idea-12-laptop { margin-right: 0; }
+
+    .margin-3 .idea-1-laptop { width: 3.93333333%; }
+    .margin-3 .idea-2-laptop { width: 12.66666666%; }
+    .margin-3 .idea-3-laptop { width: 21.4%; }
+    .margin-3 .idea-4-laptop { width: 30.13333333%; }
+    .margin-3 .idea-5-laptop { width: 38.86666666%; }
+    .margin-3 .idea-6-laptop { width: 47.6%; }
+    .margin-3 .idea-7-laptop { width: 56.33333333%; }
+    .margin-3 .idea-8-laptop { width: 65.06666666%; }
+    .margin-3 .idea-9-laptop { width: 73.8%; }
+    .margin-3 .idea-10-laptop { width: 82.53333333%; }
+    .margin-3 .idea-11-laptop { width: 91.26666666%; }
+    .margin-3 .idea-12-laptop { margin-right: 0; }
+
+    .margin-4 .idea-1-laptop { width: 2.46666666%; }
+    .margin-4 .idea-2-laptop { width: 11.33333333%; }
+    .margin-4 .idea-3-laptop { width: 20.2%; }
+    .margin-4 .idea-4-laptop { width: 29.06666666%; }
+    .margin-4 .idea-5-laptop { width: 37.93333333%; }
+    .margin-4 .idea-6-laptop { width: 46.8%; }
+    .margin-4 .idea-7-laptop { width: 55.66666666%; }
+    .margin-4 .idea-8-laptop { width: 64.53333333%; }
+    .margin-4 .idea-9-laptop { width: 73.4%; }
+    .margin-4 .idea-10-laptop { width: 82.26666666%; }
+    .margin-4 .idea-11-laptop { width: 91.13333333%; }
+    .margin-4 .idea-12-laptop { margin-right: 0; }
+
+
+    /* offset for tablet laptop widths */
+    .idea-0-laptop-offset { margin: 0; }
+    .idea-1-laptop-offset { margin-left: 8.3333333333333%; }
+    .idea-2-laptop-offset { margin-left: 16.666666666667%; }
+    .idea-3-laptop-offset { margin-left: 25%; }
+    .idea-4-laptop-offset { margin-left: 33.333333333333%; }
+    .idea-5-laptop-offset { margin-left: 41.666666666667%; }
+    .idea-6-laptop-offset { margin-left: 50%; }
+    .idea-7-laptop-offset { margin-left: 58.333333333333%; }
+    .idea-8-laptop-offset { margin-left: 66.666666666667%; }
+    .idea-9-laptop-offset { margin-left: 75%; }
+    .idea-10-laptop-offset { margin-left: 83.333333333333%; }
+    .idea-11-laptop-offset { margin-left: 91.666666666667%; }
+
+}
+/*.show-desktop { display: none; } ???????????????? */
+
+/*
+==============================================================================================
+==============================================================================================
+            DESKTOP   ---->   1200 px
+==============================================================================================
+==============================================================================================
+*/
+@media only screen and (min-width: 1200px) {
+    .idea-1-desktop { width: 8.3333333333333%; }
+    .idea-2-desktop { width: 16.666666666667%; }
+    .idea-3-desktop { width: 25%; }
+    .idea-4-desktop { width: 33.333333333333%; }
+    .idea-5-desktop { width: 41.666666666667%; }
+    .idea-6-desktop { width: 50%; }
+    .idea-7-desktop { width: 58.333333333333%; }
+    .idea-8-desktop { width: 66.666666666667%; }
+    .idea-9-desktop { width: 75%; }
+    .idea-10-desktop { width: 83.333333333333%; }
+    .idea-11-desktop { width: 91.666666666667%; }
+    .idea-12-desktop { width: 100%; }
+
+
+
+     /* Width with MARGINS */
+    .margin-1 .idea-1-desktop { width: 6.86666666%; }
+    .margin-1 .idea-2-desktop { width: 15.33333333%; }
+    .margin-1 .idea-3-desktop { width: 23.8%; }
+    .margin-1 .idea-4-desktop { width: 32.26666666%; }
+    .margin-1 .idea-5-desktop { width: 40.73333333%; }
+    .margin-1 .idea-6-desktop { width: 49.2%; }
+    .margin-1 .idea-7-desktop { width: 57.66666666%; }
+    .margin-1 .idea-8-desktop { width: 66.13333333%; }
+    .margin-1 .idea-9-desktop { width: 74.6%; }
+    .margin-1 .idea-10-desktop { width: 83.06666666%; }
+    .margin-1 .idea-11-desktop { width: 91.53333333%; }
+    .margin-1 .idea-12-desktop { margin-right: 0; }
+
+    .margin-2 .idea-1-desktop { width: 5.4%; }
+    .margin-2 .idea-2-desktop { width: 14%; }
+    .margin-2 .idea-3-desktop { width: 22.6%; }
+    .margin-2 .idea-4-desktop { width: 31.2%; }
+    .margin-2 .idea-5-desktop { width: 39.8%; }
+    .margin-2 .idea-6-desktop { width: 48.4%; }
+    .margin-2 .idea-7-desktop { width: 57%; }
+    .margin-2 .idea-8-desktop { width: 65.6%; }
+    .margin-2 .idea-9-desktop { width: 74.2%; }
+    .margin-2 .idea-10-desktop { width: 82.8%; }
+    .margin-2 .idea-11-desktop { width: 91.4%; }
+    .margin-2 .idea-12-desktop { margin-right: 0; }
+
+    .margin-3 .idea-1-desktop { width: 3.93333333%; }
+    .margin-3 .idea-2-desktop { width: 12.66666666%; }
+    .margin-3 .idea-3-desktop { width: 21.4%; }
+    .margin-3 .idea-4-desktop { width: 30.13333333%; }
+    .margin-3 .idea-5-desktop { width: 38.86666666%; }
+    .margin-3 .idea-6-desktop { width: 47.6%; }
+    .margin-3 .idea-7-desktop { width: 56.33333333%; }
+    .margin-3 .idea-8-desktop { width: 65.06666666%; }
+    .margin-3 .idea-9-desktop { width: 73.8%; }
+    .margin-3 .idea-10-desktop { width: 82.53333333%; }
+    .margin-3 .idea-11-desktop { width: 91.26666666%; }
+    .margin-3 .idea-12-desktop { margin-right: 0; }
+
+    .margin-4 .idea-1-desktop { width: 2.46666666%; }
+    .margin-4 .idea-2-desktop { width: 11.33333333%; }
+    .margin-4 .idea-3-desktop { width: 20.2%; }
+    .margin-4 .idea-4-desktop { width: 29.06666666%; }
+    .margin-4 .idea-5-desktop { width: 37.93333333%; }
+    .margin-4 .idea-6-desktop { width: 46.8%; }
+    .margin-4 .idea-7-desktop { width: 55.66666666%; }
+    .margin-4 .idea-8-desktop { width: 64.53333333%; }
+    .margin-4 .idea-9-desktop { width: 73.4%; }
+    .margin-4 .idea-10-desktop { width: 82.26666666%; }
+    .margin-4 .idea-11-desktop { width: 91.13333333%; }
+    .margin-4 .idea-12-desktop { margin-right: 0; }
+
+
+    /* offset for tablet laptop widths */
+    .idea-0-desktop-offset { margin: 0; }
+    .idea-1-desktop-offset { margin-left: 8.3333333333333%; }
+    .idea-2-desktop-offset { margin-left: 16.666666666667%; }
+    .idea-3-desktop-offset { margin-left: 25%; }
+    .idea-4-desktop-offset { margin-left: 33.333333333333%; }
+    .idea-5-desktop-offset { margin-left: 41.666666666667%; }
+    .idea-6-desktop-offset { margin-left: 50%; }
+    .idea-7-desktop-offset { margin-left: 58.333333333333%; }
+    .idea-8-desktop-offset { margin-left: 66.666666666667%; }
+    .idea-9-desktop-offset { margin-left: 75%; }
+    .idea-10-desktop-offset { margin-left: 83.333333333333%; }
+    .idea-11-desktop-offset { margin-left: 91.666666666667%; }
+
+}
+/* Make visible or hidden block elements */
+
+  .show-phone, .show-tablet, .show-laptop, .show-desktop { display: none !important; }
+  .hide-phone { display: block !important; }
+
+@media only screen and (max-width: 767px) {
+  .phone { width: 100%; }
+  .hide-phone { display:none !important; }
+  .show-phone { display: block !important; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .hide-tablet { display: none !important; }
+  .show-tablet { display: block !important; }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1199px) {
+  .hide-laptop { display: none !important; }
+  .show-laptop { display: block !important; }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hide-desktop { display: none !important; }
+  .show-desktop { display: block !important; }
+}
+
+
+
+
+
+
+
+
+
+
+
