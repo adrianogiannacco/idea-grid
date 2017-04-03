@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-# Ideagrid
-
-##About
-
-Ideagrid is a responsive grid system, 
-=======
 # Idea Grid
 
 ##About
 
-Idea Grid is a responsive grid system full of features to help designers and developers get started with their responsive layout. Visit [Cute Grids](http://www.cutegrids.com) for more details.
->>>>>>> 47e592a9c80b2f5d6922316048e82adbaf9dd144
+Idea Grid is a responsive grid system.
 
 ##Features
 
