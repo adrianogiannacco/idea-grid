@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+# Ideagrid
+
+##About
+
+Ideagrid is a responsive grid system, 
+=======
 # Idea Grid
 
 ##About
 
 Idea Grid is a responsive grid system full of features to help designers and developers get started with their responsive layout. Visit [Cute Grids](http://www.cutegrids.com) for more details.
+>>>>>>> 47e592a9c80b2f5d6922316048e82adbaf9dd144
 
 ##Features
 
@@ -12,18 +20,8 @@ Idea Grid is a responsive grid system full of features to help designers and dev
 
 * Mobile First
 
-* Nestable
-
 * Fluid
 
-* Easy column manipulation
-
-* plus more
-
-##Browser Support
-
-Works on Chrome, Safari, Firefox, Opera, IE9+.
-If you need Cute grids to work in IE8 then this is possible with using respond.js polyfill for Media queries and REM-unit-polyfill for rem untis .
 
 ##Getting Started
 
@@ -31,7 +29,7 @@ If you need Cute grids to work in IE8 then this is possible with using respond.j
 
 ```
 
-<link rel="stylesheet" href="css/cutegrids.css">
+<link rel="stylesheet" href="css/ideagrid.css">
 
 ```
 **Structure layout as example below**
@@ -39,29 +37,44 @@ If you need Cute grids to work in IE8 then this is possible with using respond.j
 ```html
 
 
-    <div class="row">
-      <div class="cute-6-tablet">
-        content here....
-      </div>
-      <div class="cute-6-tablet">
-        content here....
-      </div>
+	<div class="idea-row margin-2 grid-2-phone grid-3-laptop laptop-m-reset">
+        <div class="idea-sm-wide idea-6-phone idea-7-tablet idea-7-laptop">
+            <p>Donec nec justo eget felis.</p>
+        </div> 
+        <div class="idea-6-phone idea-5-tablet idea-3-laptop">
+            <p>Donec nec justo eget felis.</p>
+        </div> 
+        <div class="idea-6-phone idea-5-tablet idea-2-laptop">
+            <p>Donec nec justo eget felis.</p>
+        </div> 
+        <div class="idea-sm-wide idea-6-phone idea-7-tablet idea-5-laptop">
+            <p>Donec nec justo eget felis.</p>
+        </div> 
+        <div class="idea-6-phone idea-7-tablet idea-6-laptop">
+            <p>Donec nec justo eget felis.</p>
+        </div> 
+        <div class="idea-6-phone idea-5-tablet idea-1-laptop">
+            <p>Donec nec justo eget felis.</p>     
+        </div> 
+        <div class="idea-3-laptop">
+            <p>Donec nec justo eget felis.</p>     
+        </div>
+        <div class="idea-6-laptop">
+            <p>Donec nec justo eget felis.</p>     
+        </div>
+        <div class="idea-3-laptop">
+            <p>Donec nec justo eget felis.</p>     
+        </div>       
     </div>
 
 ```
-Wrap the cute columns in a row. Make sure that all cute columns add up to 12. Column classes named by cute- then number of columns followed by device name for example .cute-6-tablet. Column class device widths applies to the specified  device width and wider devices widths up. Below the device width size columns are stacked and stretched 100 percent.
 
-For full instructions using Cute Grids visit [www.cutegrids.com](http://www.cutegrids.com)
 
 ##Support
 
-If you have any questions or need some support using Cute Grids then please feel free to contact me.
-
-Email: [contact@dazzyweb.com](mailto:contact@dazzyweb.com)
-
-or connect with me on twitter [@dazzy_web](https://twitter.com/dazzy_web)
+Email: [adriano.giannacco@idearia.it](mailto:adriano.giannacco@idearia.it)
 
 ##Copyright & License
 
-Copyright (C) 2014 Darren Newberry - Released under the MIT License.
+Copyright (C) 2016 Adriano Giannacco - Released under the MIT License.
 
